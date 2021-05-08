@@ -1,0 +1,25 @@
+<mvc:View controllerName="MyNameSpace.SAPUI5.controller.Details"
+          xmlns="sap.m" 
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:mycontrol="MyNameSpace.SAPUI5.control"
+          displayBlock='true' >
+    <Page title="{i18n>detailsPageTitle}"
+          showNavButton="true"
+          navButtonPress=".onNavBack">
+        <ObjectHeader title="{northwind>Quantity} x {northwind>ProductName}"
+                        responsive="true"
+                        fullScreenOptimized="true">
+            <attributes>
+                <ObjectAttribute text="{northwind>ShipName}"/>
+                <ObjectAttribute text="{northwind>ShipAddress}"/>
+                <ObjectAttribute text="{northwind>ShipCity}"/>
+                <ObjectAttribute text="{northwind>ShipRegion}"/>
+                <ObjectAttribute text="{northwind>ShipPostalCode}"/>
+                <ObjectAttribute text="{northwind>ShipCountry}"/>
+                <ObjectAttribute text="{northwind>CustomerID}"/>
+                <ObjectAttribute text="{northwind>CustomerName}"/>
+            </attributes>
+        </ObjectHeader>
+        <mycontrol:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+    </Page> 
+</mvc:View> 

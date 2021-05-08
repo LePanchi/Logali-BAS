@@ -1,0 +1,34 @@
+<mvc:View controllerName="MyNameSpace.SAPUI5.controller.HelloPanel"
+          xmlns="sap.m" 
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:core="sap.ui.core"
+          displayBlock='true' >
+    <Panel  headerText="{i18n>helloPanel}" 
+            class="sapUiResponsiveMargin" 
+            width="auto"
+            expandable="{device>/system/phone}"
+            expanded="{= !${device>/system/phone} }"
+            accessibleRole="Region">
+        <content>
+            <!--<Text text="Another Hello World!"></Text>-->
+            <Button id="helloDialogButton"
+                    icon="sap-icon://action" 
+                    text="{i18n>helloDialogBut}" 
+                    press=".onOpenDialog" 
+                    class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop" /> 
+
+            <Button text="{i18n>showHellowButtonText}" 
+                    press=".onShowHello" 
+                    class="sapUiSmallMarginEnd sapUiHideOnDesktop"/>
+                    
+            <Input value="{/recipient/name}"
+                valueLiveUpdate="true"
+                width="60%" />
+            <Text text="Hello {/recipient/name}" class="sapUiSmallMargin myboldElements sapthemeHighlight"/>
+
+            
+        </content>
+    </Panel>
+    <core:Fragment fragmentName="MyNameSpace.SAPUI5.view.Form01" type="XML"/>
+
+</mvc:View> 

@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Invoices1",
+      "type": "shell",
+      "command": "if [ ! -f ${workspaceFolder}/invoices1-approuter/node_modules/@sap/html5-repo-mock/index.js ] || [ ! -f ${workspaceFolder}/invoices1-approuter/node_modules/@sap/approuter/approuter.js ]; then npm i @sap/approuter && npm i @sap/html5-repo-mock; fi",
+      "options": {
+        "cwd": "${workspaceFolder}/invoices1-approuter"
+      }
+    },
+    {
+      "label": "Build Invoices",
+      "type": "shell",
+      "command": "if [ ! -f ${workspaceFolder}/invoices1-approuter/node_modules/@sap/html5-repo-mock/index.js ] || [ ! -f ${workspaceFolder}/invoices1-approuter/node_modules/@sap/approuter/approuter.js ]; then npm i @sap/approuter && npm i @sap/html5-repo-mock; fi",
+      "options": {
+        "cwd": "${workspaceFolder}/invoices1-approuter"
+      }
+    }
+  ]
+}
